@@ -13,7 +13,7 @@ public class Solution {
     public static void main(String[] args) {
 
     }
-    
+
     static {
         //add your code here - добавьте код тут
         reset();
@@ -25,18 +25,19 @@ public class Solution {
         //add your code here - добавьте код тут
         Scanner scanner = new Scanner(System.in);
 
-            String aircraft = scanner.nextLine();
-            try{if(aircraft.equals("helicopter")){
+        String aircraft = scanner.nextLine();
+        try {
+            if (aircraft.equals("helicopter")) {
                 result = new Helicopter();
             }
-            if (aircraft.equals("plane")){
+            if (aircraft.equals("plane")) {
                 result = new Plane(Integer.parseInt(scanner.nextLine()));
             }
-            scanner.close();}
-            catch (NumberFormatException e){
-                e.printStackTrace();
-            }
+            scanner.close();
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
         }
-
     }
+
+}
 
